@@ -57,11 +57,11 @@ function updateCartDisplay() {
     tr.appendChild(quantityCell);
 
     const priceCell = document.createElement("td");
-    priceCell.textContent = `$${item.price}`;
+    priceCell.textContent = `${item.price}฿`;
     tr.appendChild(priceCell);
 
     const totalCell = document.createElement("td");
-    totalCell.textContent = `$${itemTotalPrice}`;
+    totalCell.textContent = `${itemTotalPrice}฿`;
     tr.appendChild(totalCell);
 
     const actionsCell = document.createElement("td");
@@ -136,8 +136,8 @@ function generateCartReceipt() {
       <tr>
         <td>${productId}</td>
         <td>${item.quantity}</td>
-        <td>$${item.price}</td>
-        <td>$${itemTotalPrice}</td>
+        <td>${item.price}฿</td>
+        <td>${itemTotalPrice}฿</td>
       </tr>`;
 
     totalPrice += itemTotalPrice;
